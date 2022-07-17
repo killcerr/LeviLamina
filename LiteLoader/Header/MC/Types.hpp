@@ -1103,7 +1103,7 @@ enum class MinecraftPacketIds : int {
     EditorNetwork                     = 0XBE
 };
 
-enum ItemStackNetResult : unsigned char {
+enum class ItemStackNetResult : unsigned char {
     Success                                          = 0,
     Error                                            = 1,
     InvalidRequestActionType                         = 2,
