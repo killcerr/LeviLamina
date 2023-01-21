@@ -26,6 +26,7 @@ struct TargetSpace {
     TargetSpace(TargetSpace const&&) = delete;
 };
 struct Parameter {
+    long long max, min;
     Parameter() = delete;
     Parameter(Parameter const&) = delete;
     Parameter(Parameter const&&) = delete;
