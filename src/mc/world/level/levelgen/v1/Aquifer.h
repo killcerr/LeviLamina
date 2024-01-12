@@ -17,7 +17,19 @@ public:
         FluidSample(FluidSample const&);
         FluidSample();
     };
-
+    AquiferNoises*     mNoiseRouter;               // 0
+    OverworldNoises3d* mOverworldNoises3d;         // 8
+    SurfaceLevelCache* mSurfaceLevelCache;         // 16
+    int                seaLevel;                   // 24
+    int                mLastFluidLevel;            // 28
+    float              mLastBarrier;               // 32
+    char               filler1[1];                 // 36
+    bool               mShouldScheduleFluidUpdate; // 37
+    char               filler2[50];                // 38
+    Block*             mWaterBlock;                // 88
+    Block*             mLavaBlock;                 // 96
+    Block*             mFlowingWaterBlock;         // 104
+    Block*             mFlowingLavaBlock;          // 112
 public:
     // prevent constructor by default
     Aquifer& operator=(Aquifer const&);
@@ -29,7 +41,7 @@ public:
     // symbol: ??0Aquifer@@QEAA@AEBVChunkPos@@AEBVAquiferNoises@@AEBUOverworldNoises3d@@AEBVSurfaceLevelCache@@HHH@Z
     MCAPI Aquifer(
         class ChunkPos const& chunkPos,
-        class AquiferNoises const&,
+        class AquiferNoises const& noiseRouter,
         struct OverworldNoises3d const&,
         class SurfaceLevelCache const&,
         int,
