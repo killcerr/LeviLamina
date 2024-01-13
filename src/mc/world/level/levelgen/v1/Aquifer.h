@@ -20,7 +20,7 @@ public:
     AquiferNoises*     mNoiseRouter;               // 0
     OverworldNoises3d* mOverworldNoises3d;         // 8
     SurfaceLevelCache* mSurfaceLevelCache;         // 16
-    int                seaLevel;                   // 24
+    int                mSeaLevel;                   // 24
     int                mLastFluidLevel;            // 28
     float              mLastBarrier;               // 32
     char               filler1[1];                 // 36
