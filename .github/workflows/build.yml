@@ -38,16 +38,8 @@ jobs:
           fetch-depth: 0
 
       - uses: xmake-io/github-action-setup-xmake@v1
-        # with:
-        #   xmake-version: branch@master
-
-      - uses: actions/cache@v4
         with:
-          path: |
-            ~/AppData/Local/.xmake
-          key: xmake-${{ hashFiles('xmake.lua') }}
-          restore-keys: |
-            xmake-
+          build-cache: true
 
       - uses: microsoft/setup-msbuild@v2
 
